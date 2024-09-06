@@ -1,0 +1,53 @@
+h1 {
+  text-align: center;
+}
+
+.game-container {
+  grid-template-columns: 80px 80px 80px;
+  justify-content: center;
+  gap: 40px;
+  display: grid;
+}
+
+.square {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  background-color: green;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 90px;
+  display: flex;
+  box-shadow: 10px 5px 5px #000;
+}
+
+.restart {
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.button, .reset-button {
+  color: #fff;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: #4c43cd;
+  background-image: radial-gradient(93% 87% at 87% 89%, #0000003b 0%, #0000 86.18%), radial-gradient(66% 87% at 26% 20%, #ffffff69 0%, #fff0 69.79% 100%);
+  border: 0;
+  border-radius: 100px;
+  margin-left: 15px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 19px 31px #0003;
+}
+
+.winner {
+  display: hidden;
+}
+/*# sourceMappingURL=noughts_and_crosses.3a01df49.css.map */

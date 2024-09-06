@@ -1,0 +1,57 @@
+h1 {
+    text-align: center;
+
+}
+
+.game-container {
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+    grid-template-columns: 80px 80px 80px;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    cursor: pointer;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+}
+
+.restart {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.button, .reset-button {
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background-color: #4C43CD;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  margin-left: 15px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+
+}
+
+.winner {
+    display: hidden;
+}
