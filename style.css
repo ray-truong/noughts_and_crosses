@@ -3,11 +3,21 @@ h1 {
 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
 .game-container {
     display: grid;
     justify-content: center;
     gap: 40px;
     grid-template-columns: 80px 80px 80px;
+    width: 360px;
+    height: 420px;
 }
 
 .square {
@@ -21,7 +31,6 @@ h1 {
     color: white;
     box-shadow: 10px 5px 5px black;
     font-size: 90px;
-    color: white;
     text-align: center;
 }
 
@@ -54,4 +63,79 @@ h1 {
 
 .winner {
     display: hidden;
+}
+
+.winline {
+    position: absolute;
+    background-color: red;
+    border-radius: 25px;
+}
+
+#winline-0 {
+    margin-top: 74px;
+    top: calc(100px / 2);
+    left: 51.5%;
+    transform: translateX(-50%);
+    width: calc(3 * 80px + 2 * 51px);
+    height: 10px; 
+}
+
+#winline-1 {
+    margin-top: 227px;
+    top: calc(100px / 2);
+    left: 51.5%;
+    transform: translateX(-50%);
+    width: calc(3 * 80px + 2 * 51px);
+    height: 10px; 
+}
+
+#winline-2 {
+    margin-top: 380px;
+    top: calc(100px / 2);
+    left: 51.5%;
+    transform: translateX(-50%);
+    width: calc(3 * 80px + 2 * 51px);
+    height: 10px; 
+}
+
+#winline-3 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 70px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-4 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 190px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-5 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 310px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-6 {
+    top: 5%;
+    transform: translateX(-50%) rotate(-38deg);
+    transform-origin: top-right;
+    width: 8px;
+    height: 510px;
+    margin-left: 188px;
+}
+
+#winline-7 {
+    top: 5%;
+    transform: translateX(-50%) rotate(38deg);
+    transform-origin: top-right;
+    width: 8px;
+    height: 510px;
+    margin-left: 188px;
 }

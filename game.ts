@@ -1,6 +1,7 @@
 const board = document.querySelector('.game-container') as HTMLElement;
 const resetButton = document.querySelector('.reset-button') as HTMLElement;
 const win = document.querySelector('.winner') as HTMLElement;
+let winlineCreated = false;
 
 
 type Turn = "X" | "O" | ""
@@ -34,19 +35,87 @@ function createSquares(): void {
     }
 }
 
+function createWinline(i: number): void {
+    const winline: HTMLDivElement = document.createElement('div');
+    winline.className = 'winline';
+    winline.id = `winline-${i}`;
+    board.append(winline);
+}
+
+
 function winner(): boolean {
     const squares: Array<string> = getSquares();
-    return (
-        (squares[0] === squares[1] && squares[1] === squares[2] && squares[0] !== "") ||
-        (squares[3] === squares[4] && squares[4] === squares[5] && squares[4] !== "") ||
-        (squares[6] === squares[7] && squares[7] === squares[8] && squares[6] !== "") ||
-        (squares[0] === squares[3] && squares[3] === squares[6] && squares[0] !== "") ||
-        (squares[1] === squares[4] && squares[4] === squares[7] && squares[1] !== "") ||
-        (squares[2] === squares[5] && squares[5] === squares[8] && squares[2] !== "") ||
-        (squares[0] === squares[4] && squares[4] === squares[8] && squares[0] !== "") ||
-        (squares[2] === squares[4] && squares[4] === squares[6] && squares[2] !== "")
-    );
+    if (squares[0] === squares[1] && squares[1] === squares[2] && squares[0] !== "") {
+        if (!winlineCreated) {
+            createWinline(0);
+            winlineCreated = true;
+        }
+        
+        return true;
+    }
+    else if (squares[3] === squares[4] && squares[4] === squares[5] && squares[4] !== "") {
+        if (!winlineCreated) {
+            createWinline(1);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[6] === squares[7] && squares[7] === squares[8] && squares[6] !== "") {
+        if (!winlineCreated) {
+            createWinline(2);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[0] === squares[3] && squares[3] === squares[6] && squares[0] !== "") {
+        if (!winlineCreated) {
+            createWinline(3);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[1] === squares[4] && squares[4] === squares[7] && squares[1] !== "") {
+        if (!winlineCreated) {
+            createWinline(4);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[2] === squares[5] && squares[5] === squares[8] && squares[2] !== "") {
+        if (!winlineCreated) {
+            createWinline(5);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[0] === squares[4] && squares[4] === squares[8] && squares[0] !== "") {
+        if (!winlineCreated) {
+            createWinline(6);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else if (squares[2] === squares[4] && squares[4] === squares[6] && squares[2] !== "") {
+        if (!winlineCreated) {
+            createWinline(7);
+            winlineCreated = true;
+        }
+        return true;
+    }
+    else {
+        return false;
+    }
 }
+
+function removeWinlines(): void {
+    for (let i = 0; i < 8; i++) {
+        const winline = document.getElementById(`winline-${i}`);
+        if (winline) {
+            winline.remove();
+        }
+    }
+}
+
 
 function resetSquares(): void {
     for (let i = 0; i < 9; i++) {
@@ -105,6 +174,8 @@ function finish(): void {
 function reset(): void {
     turn = "X";
     resetSquares();
+    removeWinlines();
+    winlineCreated = false;
 }
 
 function draw(): boolean {

@@ -2,10 +2,20 @@ h1 {
   text-align: center;
 }
 
+body {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
 .game-container {
   grid-template-columns: 80px 80px 80px;
   justify-content: center;
   gap: 40px;
+  width: 360px;
+  height: 420px;
   display: grid;
 }
 
@@ -49,5 +59,80 @@ h1 {
 
 .winner {
   display: hidden;
+}
+
+.winline {
+  background-color: red;
+  border-radius: 25px;
+  position: absolute;
+}
+
+#winline-0 {
+  width: 342px;
+  height: 10px;
+  margin-top: 74px;
+  top: 50px;
+  left: 51.5%;
+  transform: translateX(-50%);
+}
+
+#winline-1 {
+  width: 342px;
+  height: 10px;
+  margin-top: 227px;
+  top: 50px;
+  left: 51.5%;
+  transform: translateX(-50%);
+}
+
+#winline-2 {
+  width: 342px;
+  height: 10px;
+  margin-top: 380px;
+  top: 50px;
+  left: 51.5%;
+  transform: translateX(-50%);
+}
+
+#winline-3 {
+  width: 8px;
+  height: 406px;
+  margin-top: 1px;
+  margin-left: 70px;
+  transform: translateX(-50%);
+}
+
+#winline-4 {
+  width: 8px;
+  height: 406px;
+  margin-top: 1px;
+  margin-left: 190px;
+  transform: translateX(-50%);
+}
+
+#winline-5 {
+  width: 8px;
+  height: 406px;
+  margin-top: 1px;
+  margin-left: 310px;
+  transform: translateX(-50%);
+}
+
+#winline-6 {
+  transform-origin: top-right;
+  width: 8px;
+  height: 510px;
+  margin-left: 188px;
+  top: 5%;
+  transform: translateX(-50%)rotate(-38deg);
+}
+
+#winline-7 {
+  transform-origin: top-right;
+  width: 8px;
+  height: 510px;
+  margin-left: 188px;
+  top: 5%;
+  transform: translateX(-50%)rotate(38deg);
 }
 /*# sourceMappingURL=noughts_and_crosses.3a01df49.css.map */
