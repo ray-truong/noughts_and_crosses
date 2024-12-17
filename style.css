@@ -1,0 +1,139 @@
+h1 {
+    text-align: center;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.game-container {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+    grid-template-columns: 80px 80px 80px;
+    width: 360px;
+    height: 420px;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    cursor: pointer;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+    font-size: 90px;
+    text-align: center;
+}
+
+.restart {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.button, .reset-button {
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background-color: #4C43CD;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  margin-left: 15px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+
+}
+
+.winner {
+    display: hidden;
+}
+
+.winline {
+    position: absolute;
+    background-color: red;
+    border-radius: 25px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+#winline-0 {
+    top: calc(44px); /* Adjusted for the vertical position */
+    left: 53%;
+    transform: translateX(-50%);
+    height: 10px; 
+}
+
+#winline-1 {
+    top: calc(200px);
+    left: 53%;
+    transform: translateX(-50%);
+    height: 10px; 
+}
+
+#winline-2 {
+    top: calc(353px);
+    left: 53%;
+    transform: translateX(-50%);
+    height: 10px; 
+}
+
+#winline-3 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 70px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-4 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 190px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-5 {
+    margin-top: 1px;
+    transform: translateX(-50%);
+    margin-left: 310px;
+    width: 8px;
+    height: 406px;
+}
+
+#winline-6 {
+    top: -15%;
+    transform: translateX(-50%) rotate(-40deg);
+    transform-origin: top-right;
+    width: 8px;
+    height: 533px;
+    margin-left: 190px;
+}
+
+#winline-7 {
+    top: -15%;
+    transform: translateX(-50%) rotate(40deg);
+    transform-origin: top-right;
+    width: 8px;
+    height: 533px;
+    margin-left: 188px;
+}
