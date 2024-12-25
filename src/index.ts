@@ -6,8 +6,13 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/hvh', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, '../public/noughts_and_crosses.html'));
+    res.sendFile(path.join(__dirname, '../public/noughts_and_crosses_hvh.html'));
 });
+
+app.get('/hvc', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname, '../public/noughts_and_crosses_hvc.html'));
+});
+
 
 app.get('/api', (req: Request, res: Response) => {
     res.json({ message: "Hello from REST API" });
