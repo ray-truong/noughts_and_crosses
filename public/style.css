@@ -137,3 +137,54 @@ body {
     height: 533px;
     margin-left: 188px;
 }
+
+.custom-alert {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content {
+    position: relative;
+    background-color: #4C43CD;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 600px;
+    padding: 20px;
+}
+
+.turn {
+    margin-right: 100px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    font: arial;
+    background-color: aqua;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    
+}
+
+button:hover {
+    color: aqua;
+    background-color: red;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
