@@ -8,6 +8,7 @@ const game = new Game();
 const goFirst = document.getElementById('go-first');
 const goSecond = document.getElementById('go-second');
 const alertBox = document.getElementById('custom-alert');
+const playAgain = document.getElementById('reset');
 
 goFirst.addEventListener('click', function(){
 
@@ -22,3 +23,7 @@ goSecond.addEventListener('click', function(){
     this.turn = true;
     console.log(this.turn);
 });
+
+playAgain.addEventListener('click', function() {
+    alertBox.style.display = 'flex';
+})
